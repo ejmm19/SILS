@@ -1,0 +1,51 @@
+.todo{
+  background: url('../img/antena_Jaizkibel_18508.jpg')no-repeat;
+  background-size: 100%;
+  height: 735px;
+}
+.icmsj{
+  font-size: 15px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.bdg{
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.bdg:hover{
+  color: red;
+}
+#menulat{
+  width: 19%;
+  margin-top: 66px;
+  height: 730px;
+  background: rgb(72, 121, 110);
+}
+.opmenu{
+  color: #FFF;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.opmenu:hover{
+  color: #57575d;
+  margin-left: 5%;
+}
+#menun:hover{
+  font-size: 20px;
+  color: #FFF;
+}
+#menun{
+  font-size: 20px;
+  color: #FFF;
+}
+#logo{
+  position: absolute;
+    margin-left: -16px;
+    margin-top: -23px;
+}
