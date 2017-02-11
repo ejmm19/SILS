@@ -26,13 +26,17 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
+
+                        @foreach ($lista as $key )
+                          <tr><td>{{$cont++}}</td>
+                          <td>{{$key['name']}}</td>
+                          <td>{{$key['apellidos']}}</td>
+                          <td>{{$key['email']}}</td>
+                          <td>Opciones</td>
+                          </tr>
+                        @endforeach
+
+
                     </tbody>
                   </table>
                 </div>
@@ -50,32 +54,40 @@
             <h4 class="modal-title">Agregar Usuario</h4>
           </div>
           <div class="modal-body">
-            <form class="form-horizontal">
+
+            <form class="form-horizontal"  role="form" method="POST" action="{{url('/newuser')}}">
+              {{ csrf_field() }}
               <div class="form-group">
                 <label for="nombre" class="col-lg-2 control-label">Nombre</label>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" id="inputnombre" placeholder="Nombre">
+                  <input type="text" class="form-control" id="inputnombre" name="nombre" placeholder="Nombre" required="" autofocus="">
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputapellidos" class="col-lg-2 control-label">Apellidos</label>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" id="inputapellidos" placeholder="Apellidos">
+                  <input type="text" class="form-control" name="apellidos" id="inputapellidos" placeholder="Apellidos" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputEmail" class="col-lg-2 control-label">Correo</label>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                  <input type="text" class="form-control" name="email" id="inputEmail" placeholder="Email" required="">
+                </div>
+                <br>
+                <div class="col-md-2 col-md-offset-8" style="margin-top:5%;">
+                  <button type="submit" class="btn btn-primary">
+                      Registrar
+                  </button>
+                </div>
+                <div class="col-md-2"  style="margin-top:5%;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
               </div>
+          </div>
 
-          </div>
-          <div class="modal-footer">
-            <input type="submit" name="registrar" value="Registrar" class="btn btn-success">
-              </form>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+          </form>
+
         </div>
 
       </div>

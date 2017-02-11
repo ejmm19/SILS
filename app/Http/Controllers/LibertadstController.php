@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Userslibertadst;
 use App\Tipo;
 use Auth;
 class LibertadstController extends Controller
@@ -24,8 +25,21 @@ class LibertadstController extends Controller
         return view('menu.consignaciones')->with('tipouser', $tipouser);
     }
     public function listausuarios(){
+        $lista = Userslibertadst::all();
+        $tipouser = Tipo::where('id', Auth::user()->id)->get();
+        return view('menu.listausuarios')->with(['tipouser' => $tipouser,'lista'=>$lista,'cont'=>1]);
+    }
+    public function newuser(Request $request){
 
-      $tipouser = Tipo::where('id', Auth::user()->id)->get();
-        return view('menu.listausuarios')->with('tipouser', $tipouser);
+        $userlibertadst = new Userslibertadst();
+        $userlibertadst->name=$request->nombre;
+        $userlibertadst->apellidos=$request->apellidos;
+        $userlibertadst->email=$request->email;
+
+        if ($userlibertadst->save()) {
+          return back()->with('success', 'Usuario Registrado');
+        }else {
+          return back()->with('error', 'No se Pudo registrar');
+        }
     }
 }

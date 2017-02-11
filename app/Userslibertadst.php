@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Userslibertadst extends Model
 {
     //
-    protected $table = "tipouser";
+    protected $table = "userslibertad";
 
 
     protected $fillable = [

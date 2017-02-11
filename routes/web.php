@@ -23,3 +23,4 @@ Route::get('/ingreso', 'LibertadstController@ingresos');
 Route::get('/gastos', 'LibertadstController@gastos');
 Route::get('/consignaciones', 'LibertadstController@consignaciones');
 Route::get('/listausuarios', 'LibertadstController@listausuarios');
+Route::post('/newuser','LibertadstController@newuser');
