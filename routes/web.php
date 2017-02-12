@@ -19,8 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/ingreso', 'LibertadstController@ingresos');
-Route::get('/gastos', 'LibertadstController@gastos');
-Route::get('/consignaciones', 'LibertadstController@consignaciones');
-Route::get('/listausuarios', 'LibertadstController@listausuarios');
-Route::post('/newuser','LibertadstController@newuser');
+Route::get('/ingresos', 'PpalController@ingresos');
+Route::get('/gastos', 'PpalController@gastos');
+Route::get('/consignaciones', 'PpalController@consignaciones');
+Route::get('/listausuarios', 'PpalController@listausuarios');
+Route::post('/newuser','PpalController@newuser');

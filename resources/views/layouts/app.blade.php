@@ -88,10 +88,10 @@
             <img src="{{url('img/logoTC2.png')}}" alt="" width="100%" id="logo">
             <ul class="nav nav-pills nav-stacked" style="margin-top: 60%;">
               <li class="active"><a>Menu</a></li><br>
-              <li><a href="{{url('/ingreso')}}" class="opmenu"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> - Ingresos</a></li>
+              <li><a href="{{url('/ingresos')}}" class="opmenu"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> - Ingresos</a></li>
               <li><a href="{{url('/gastos')}}" class="opmenu"><span class="glyphicon glyphicon-export" aria-hidden="true"></span> - Gastos</a></li>
               <li><a href="{{url('/consignaciones')}}" class="opmenu"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> - Consignaciones</a></li>
-              <li><a href="{{url('/listausuarios')}}" class="opmenu"><span class="icon-users"></span> - Usuarios</a></li>
+              <!--<li><a href="" class="opmenu"><span class="icon-users"></span> - Usuarios</a></li>-->
             </ul>
           </div>
         </aside>

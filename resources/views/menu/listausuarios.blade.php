@@ -5,10 +5,9 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading"><h3>Lista de Usuarios</h3></div>
+                <div class="panel-heading"><h3>Lista de Clientes</h3></div>
 
                 <div class="panel-body">
-                    You are logged in!
                     <div class="col-md-4 col-md-offset-9">
                       <button type="button" class="btn btn-success">Buscar</button>
                       <button type="button" class="btn btn-primary"  class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar</button>
